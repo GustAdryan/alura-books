@@ -1,6 +1,9 @@
 const containerBooks = document.querySelector('#livros');
+const totalValueBooksElement = document.getElementById('valor_total_livros_disponiveis');
+
 
 function displayOnScreen(bookLis) {
+    totalValueBooksElement.innerHTML = ''
     containerBooks.innerHTML = ''
     bookLis.forEach(book => {
         let availability = book.quantidade > 0 ? 'livro__imagens' : 'livro__imagens indisponivel'
